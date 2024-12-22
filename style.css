@@ -9,17 +9,17 @@ body {
 
 html {
   font-family: "Red Hat Display", "Arial", sans-serif;
-  font-weight: normal;
   font-size: 18px;
   color: #3a274a;
   letter-spacing: 0.8px;
+  line-height: 160%;
 }
 
 h1 {
   font-family: "Overpass";
-  font-weight: 500;
-  color: white;
-  letter-spacing: normal;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 1px;
 }
 h2,
 h3,
@@ -27,8 +27,8 @@ h4,
 h5,
 h6 {
   font-family: "Overpass";
-  font-weight: 500;
-  color: #3a274a;
+  font-weight: 600;
+  color: #43007d;
   letter-spacing: normal;
 }
 
@@ -49,18 +49,87 @@ header {
   text-align: center;
   background-color: #31005c;
   padding: 40px;
-  color: white;
+  color: #e2dbec;
 }
 
 nav a {
-  color: white;
-  font-style: ;
+  color: #e2dbec;
+  margin-left: 16px;
 }
 
+/*pseudoclass*/
+nav a:hover {
+  color: #ffffff;
+}
+
+nav a:active {
+  color: #d8bdff;
+}
+/*:hover needs to be defined before :active, otherwise hover would override the active*/
+
+/*descendant selector*/
 main a {
-  color: #3a274a;
+  color: #3a018a;
+}
+
+main a:hover {
+  color: #5700d0;
+}
+
+main a:active {
+  color: #7c1fff;
 }
 
 span {
   font-weight: 700;
+}
+
+/*lobotomized owl selector*/
+li + li {
+  margin-top: 5px;
+}
+
+article + article {
+  border-top-style: solid;
+  border-width: 2px;
+  border-top-color: #bab4c0;
+  padding-top: 24px;
+}
+
+article {
+  padding-bottom: 32px;
+}
+
+section {
+  padding-bottom: 8px;
+}
+
+section p:nth-of-type(1),
+section p:nth-of-type(2) {
+  font-size: 16px;
+  font-weight: 600;
+  color: #42354d;
+}
+
+section p:nth-of-type(3) {
+  margin-top: 8px;
+}
+
+main p {
+  margin: 2px;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul,
+ol {
+  margin: 2px;
 }
