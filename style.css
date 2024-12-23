@@ -15,12 +15,7 @@ html {
   line-height: 160%;
 }
 
-h1 {
-  font-family: "Overpass";
-  font-weight: 600;
-  color: #ffffff;
-  letter-spacing: 1px;
-}
+h1,
 h2,
 h3,
 h4,
@@ -30,6 +25,33 @@ h6 {
   font-weight: 600;
   color: #43007d;
   letter-spacing: normal;
+}
+
+h1 {
+  color: #ffffff;
+  letter-spacing: 1px;
+  font-weight: 400;
+  font-size: 48px;
+  margin-bottom: 24px;
+}
+
+h2 {
+  margin-bottom: 24px;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 8px;
+}
+
+h1 + p {
+  margin-bottom: 36px;
+}
+
+h1 + p::after {
+  content: " ✨";
 }
 
 main {
@@ -45,16 +67,15 @@ header {
   padding-left: 16px;
   padding-right: 16px;
   padding-top: 40px;
-  padding-bottom: 40px;
+  padding-bottom: 32px;
   text-align: center;
   background-color: #31005c;
-  padding: 40px;
   color: #e2dbec;
 }
 
 nav a {
   color: #e2dbec;
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 /*pseudoclass*/
@@ -92,27 +113,64 @@ li + li {
 article + article {
   border-top-style: solid;
   border-width: 2px;
-  border-top-color: #bab4c0;
+  border-top-color: #d1cae6;
   padding-top: 24px;
 }
 
 article {
-  padding-bottom: 32px;
+  padding-bottom: 40px;
 }
 
 section {
   padding-bottom: 8px;
 }
 
-section p:nth-of-type(1),
-section p:nth-of-type(2) {
+.experiences section p:nth-of-type(1),
+.experiences section p:nth-of-type(2) {
   font-size: 16px;
   font-weight: 600;
   color: #42354d;
 }
 
-section p:nth-of-type(3) {
+.experiences section p:nth-of-type(1)::before {
+  content: "🗓️ ";
+}
+
+.experiences section p:nth-of-type(2)::before {
+  content: "🏢 ";
+}
+
+.experiences section p:nth-of-type(3) {
   margin-top: 8px;
+}
+
+.experiences section:nth-of-type(1),
+.experiences section:nth-of-type(2),
+.experiences section:nth-of-type(3) {
+  border-left-style: solid;
+  border-color: #d1cae6;
+  border-width: 8px;
+  padding-left: 24px;
+  padding-bottom: 1px;
+  padding-top: 0px;
+  margin-bottom: 40px;
+  margin-top: 32px;
+}
+
+.experiences section:nth-of-type(4) {
+  border-left-style: solid;
+  border-color: #d1cae6;
+  border-width: 8px;
+  padding-left: 24px;
+  padding-bottom: 1px;
+  padding-top: 0px;
+  margin-bottom: 16px;
+  margin-top: 32px;
+}
+
+::selection {
+  background-color: #31005c;
+  color: #e9e3ee;
 }
 
 main p {
