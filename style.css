@@ -2,17 +2,23 @@
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  background-color: #e9e3ee;
-}
-
 html {
   font-family: "Red Hat Display", "Arial", sans-serif;
   font-size: 18px;
   color: #3a274a;
   letter-spacing: 0.8px;
   line-height: 160%;
+}
+
+body {
+  font-family: inherit;
+  margin: 0;
+  background-color: #e9e3ee;
+}
+
+::selection {
+  background-color: #31005c;
+  color: #e9e3ee;
 }
 
 h1,
@@ -101,6 +107,16 @@ main a:active {
   color: #7c1fff;
 }
 
+a {
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 .profile span {
   font-weight: 700;
 }
@@ -119,6 +135,10 @@ article + article {
   border-width: 2px;
   border-top-color: #d1cae6;
   padding-top: 24px;
+}
+
+main p {
+  margin: 2px;
 }
 
 article {
@@ -170,25 +190,6 @@ section {
   padding-top: 0px;
   margin-bottom: 16px;
   margin-top: 32px;
-}
-
-::selection {
-  background-color: #31005c;
-  color: #e9e3ee;
-}
-
-main p {
-  margin: 2px;
-}
-
-a {
-  text-decoration: none;
-  font-weight: 600;
-  letter-spacing: 1px;
-}
-
-a:hover {
-  text-decoration: underline;
 }
 
 ul,
