@@ -208,6 +208,10 @@ div {
   margin-top: 32px;
 }
 
+.skills section + section {
+  padding-top: 4px;
+}
+
 ul {
   margin: 0px;
   padding: 0px;
