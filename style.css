@@ -127,7 +127,7 @@ a:hover {
 
 /*lobotomized owl selector*/
 li + li {
-  margin-top: 5px;
+  margin-top: 4px;
 }
 
 article + article {
@@ -192,7 +192,30 @@ section {
   margin-top: 32px;
 }
 
-ul,
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
 ol {
-  margin: 2px;
+  margin: 0px;
+  padding: 0px 0px 0px 24px;
+}
+
+ol li {
+  padding-bottom: 8px;
+}
+
+.skills li {
+  display: inline-block;
+  margin-right: 8px;
+  margin-bottom: 10px;
+  background-color: #c3b4ec49;
+  border: 1px;
+  border-radius: 4px;
+  padding: 1px 8px 1px 8px;
+}
+
+ol li a {
+  padding-inline: 4px;
 }
