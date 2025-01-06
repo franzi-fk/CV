@@ -101,8 +101,12 @@ main a:active {
   color: #7c1fff;
 }
 
-span {
+.profile span {
   font-weight: 700;
+}
+
+.experiences span::before {
+  content: "🏢 ";
 }
 
 /*lobotomized owl selector*/
