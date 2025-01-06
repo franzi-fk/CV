@@ -41,10 +41,6 @@ h1 {
   margin-bottom: 24px;
 }
 
-h2 {
-  margin-bottom: 24px;
-}
-
 h3,
 h4,
 h5,
@@ -94,6 +90,20 @@ nav a:active {
 }
 /*:hover needs to be defined before :active, otherwise hover would override the active*/
 
+aside p {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  width: fit-content;
+  height: fit-content;
+  background-color: #ffd22f;
+  border-radius: 2px;
+  margin: 0px;
+  padding: 1px 8px 1px 8px;
+  color: #3a274a;
+  font-weight: 400;
+}
+
 /*descendant selector*/
 main a {
   color: #3a018a;
@@ -137,16 +147,22 @@ article + article {
   padding-top: 24px;
 }
 
-main p {
-  margin: 2px;
-}
-
-article {
+div {
+  position: relative;
+  left: 12px;
+  right: 12px;
   padding-bottom: 40px;
 }
 
-section {
-  padding-bottom: 8px;
+.profile p,
+.skills p {
+  margin: 0px;
+  padding: 0px;
+}
+
+.experiences p {
+  padding-block: 2px;
+  margin: 0px;
 }
 
 .experiences section p:nth-of-type(1),
@@ -188,7 +204,7 @@ section {
   padding-left: 24px;
   padding-bottom: 1px;
   padding-top: 0px;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   margin-top: 32px;
 }
 
