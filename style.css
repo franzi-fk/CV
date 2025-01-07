@@ -1,3 +1,5 @@
+/*----- || General styles || -----*/
+
 * {
   box-sizing: border-box;
 }
@@ -21,6 +23,8 @@ body {
   background-color: #31005c;
   color: #e9e3ee;
 }
+
+/*----- || Headline Typo || -----*/
 
 h1,
 h2,
@@ -65,6 +69,8 @@ h1 + p::after {
   content: " ✨";
 }
 
+/*----- || Header || -----*/
+
 /* not necessary, just for practicing em vs rem */
 .intro {
   font-size: 3rem;
@@ -78,15 +84,6 @@ h1 + p::after {
   font-size: 0.375em;
 }
 /* ---------------------------------------------- */
-
-main {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-  max-width: 64ch;
-  margin: 0 auto;
-}
 
 header {
   padding-left: 1rem;
@@ -122,10 +119,62 @@ aside p {
   background-color: #ffd22f;
   border-radius: 0.125rem;
   margin: 0px;
-  padding: 0.063rem 0.5rem 0.063rem 0.5rem;
+  padding: 0.2rem 0.75rem 0.22rem 0.75rem;
   color: #3a274a;
   font-weight: 400;
 }
+
+/*----- || Main General || -----*/
+
+main {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  max-width: 64ch;
+  margin: 0 auto;
+}
+
+/*----- || Main Divider || -----*/
+
+article + article {
+  border-top-style: solid;
+  border-width: 0.125rem;
+  border-top-color: #d1cae6;
+  padding-top: 1.5rem;
+}
+
+/*----- || Main Content Spacing || -----*/
+
+h2 {
+  position: relative;
+  left: -0.825rem;
+}
+
+main > * {
+  padding: 0 1rem 2.825rem 1rem;
+}
+
+.profile p,
+.skills p {
+  margin: 0px;
+  padding: 0px;
+}
+
+.experiences p {
+  padding-block: 0.125rem;
+  margin: 0px;
+}
+
+.experiences section p:nth-of-type(3) {
+  margin-top: 0.5rem;
+}
+
+.skills section + section {
+  padding-top: 0.25rem;
+}
+
+/*----- || Main Links || -----*/
 
 /*descendant selector*/
 main a {
@@ -150,44 +199,14 @@ a:hover {
   text-decoration: underline;
 }
 
+/*----- || Main Content Styles || -----*/
+
 .profile span {
   font-weight: 700;
 }
 
 .experiences span::before {
   content: "🏢 ";
-}
-
-/*lobotomized owl selector*/
-li + li {
-  margin-top: 0.25rem;
-}
-
-article + article {
-  border-top-style: solid;
-  border-width: 0.125rem;
-  border-top-color: #d1cae6;
-  padding-top: 1.5rem;
-}
-
-h2 {
-  position: relative;
-  left: -0.825rem;
-}
-
-main > * {
-  padding: 0 1rem 2.825rem 1rem;
-}
-
-.profile p,
-.skills p {
-  margin: 0px;
-  padding: 0px;
-}
-
-.experiences p {
-  padding-block: 0.125rem;
-  margin: 0px;
 }
 
 .experiences section p:nth-of-type(1),
@@ -203,10 +222,6 @@ main > * {
 
 .experiences section p:nth-of-type(2)::before {
   content: "🏢 ";
-}
-
-.experiences section p:nth-of-type(3) {
-  margin-top: 0.5rem;
 }
 
 .experiences section:nth-of-type(1),
@@ -233,9 +248,7 @@ main > * {
   margin-top: 2rem;
 }
 
-.skills section + section {
-  padding-top: 0.25rem;
-}
+/*----- || Main List Styles || -----*/
 
 ul {
   margin: 0px;
@@ -249,6 +262,11 @@ ol {
 
 ol li {
   padding-bottom: 0.5rem;
+}
+
+/*lobotomized owl selector*/
+li + li {
+  margin-top: 0.25rem;
 }
 
 .skills li {
