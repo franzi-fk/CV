@@ -281,3 +281,44 @@ li + li {
 ol li a {
   padding-inline: 0.25rem;
 }
+
+/*----- || Media Queries || -----*/
+
+@media screen and (max-width: 767px) {
+  header {
+    padding-top: 4rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 1.1rem;
+  }
+  article + article {
+    padding-top: 2.5rem;
+  }
+  main > * {
+    padding-bottom: 3.5rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  body {
+    font-size: 1.1rem;
+  }
+  aside {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+  }
+}
+
+@media print {
+  nav {
+    display: none;
+  }
+  aside {
+    display: none;
+  }
+}
