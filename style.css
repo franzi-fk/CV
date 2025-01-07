@@ -24,7 +24,7 @@ body {
   color: #e9e3ee;
 }
 
-/*----- || Headline Typo || -----*/
+/*----- || Headline Styles || -----*/
 
 h1,
 h2,
@@ -61,14 +61,6 @@ h6 {
   margin-bottom: 0.5rem;
 }
 
-h1 + p {
-  margin-bottom: 2.25rem;
-}
-
-h1 + p::after {
-  content: " ✨";
-}
-
 /*----- || Header || -----*/
 
 /* not necessary, just for practicing em vs rem */
@@ -93,6 +85,14 @@ header {
   text-align: center;
   background-color: #31005c;
   color: #e2dbec;
+}
+
+h1 + p::after {
+  content: " ✨";
+}
+
+h1 + p {
+  margin-bottom: 2.25rem;
 }
 
 nav a {
