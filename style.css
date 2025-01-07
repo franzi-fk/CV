@@ -84,7 +84,7 @@ main {
   padding-right: 1rem;
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
-  max-width: 62ch;
+  max-width: 64ch;
   margin: 0 auto;
 }
 
@@ -170,11 +170,13 @@ article + article {
   padding-top: 1.5rem;
 }
 
-div {
+h2 {
   position: relative;
-  left: 0.75rem;
-  right: 0.75rem;
-  padding-bottom: 2.5rem;
+  left: -0.825rem;
+}
+
+main > * {
+  padding: 0 1rem 2.825rem 1rem;
 }
 
 .profile p,
