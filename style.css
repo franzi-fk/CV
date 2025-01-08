@@ -95,9 +95,26 @@ h1 + p {
   margin-bottom: 2.25rem;
 }
 
+/*----- || Navigation || -----*/
+
+menu {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  flex-direction: column;
+}
+
+menu li {
+  list-style-type: none;
+}
+
 nav a {
   color: #e2dbec;
-  margin-left: 1.5rem;
+  margin: 0;
+  padding: 0;
 }
 
 /*pseudoclass*/
@@ -197,6 +214,7 @@ a {
 
 a:hover {
   text-decoration: underline;
+  text-underline-offset: 0.5rem;
 }
 
 /*----- || Main Content Styles || -----*/
@@ -269,6 +287,24 @@ li + li {
   margin-top: 0.25rem;
 }
 
+.skills ul {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  row-gap: 0.8rem;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+
+.skills li {
+  list-style-type: none;
+  background-color: #c3b4ec49;
+  border-radius: 0.25rem;
+  padding: 0.063rem 0.5rem 0.063rem 0.5rem;
+}
+
+/* Inline block as alternative to flexbox 
+
 .skills li {
   display: inline-block;
   margin-right: 0.5rem;
@@ -277,6 +313,8 @@ li + li {
   border-radius: 0.25rem;
   padding: 0.063rem 0.5rem 0.063rem 0.5rem;
 }
+  
+*/
 
 ol li a {
   padding-inline: 0.25rem;
@@ -299,6 +337,12 @@ ol li a {
   }
   main > * {
     padding-bottom: 3.5rem;
+  }
+  menu {
+    align-items: baseline;
+    justify-content: center;
+    gap: 1.7rem;
+    flex-direction: row;
   }
 }
 
