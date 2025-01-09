@@ -4,10 +4,25 @@
   box-sizing: border-box;
 }
 
+:root {
+  --clr-bg: #e9e3ee;
+  --clr-light-purple: #d1cae6;
+  --clr-light-pink: #d8bdff;
+  --clr-bg-accent: #c3b4ec49;
+  --clr-vibrant-purple: #7c1fff;
+  --clr-purple: #5700d0;
+  --clr-accent: #31005c;
+  --clr-purple-darker: #3a018a;
+  --clr-text-default: #3a274a;
+  --clr-text-headline: #43007d;
+  --clr-text-alt: #42354d;
+  --clr-yellow: #ffd22f;
+  --clr-white: white;
+}
+
 html {
   font-family: "Red Hat Display", "Arial", sans-serif;
-  font-size: 1rem;
-  color: #3a274a;
+  color: var(--clr-text-default);
   letter-spacing: 0.05rem;
   line-height: 170%;
 }
@@ -16,12 +31,12 @@ body {
   font-family: inherit;
   font-size: 1.125rem;
   margin: 0;
-  background-color: #e9e3ee;
+  background-color: var(--clr-bg);
 }
 
 ::selection {
-  background-color: #31005c;
-  color: #e9e3ee;
+  background-color: var(--clr-accent);
+  color: var(--clr-bg);
 }
 
 /*----- || Headline Styles || -----*/
@@ -34,12 +49,12 @@ h5,
 h6 {
   font-family: "Overpass";
   font-weight: 600;
-  color: #43007d;
+  color: var(--clr-text-headline);
   letter-spacing: normal;
 }
 
 h1 {
-  color: #ffffff;
+  color: var(--clr-white);
   letter-spacing: 0.062rem;
   font-weight: 400;
   font-size: 2.75rem;
@@ -83,8 +98,8 @@ header {
   padding-top: 2.5rem;
   padding-bottom: 2rem;
   text-align: center;
-  background-color: #31005c;
-  color: #e2dbec;
+  background-color: var(--clr-accent);
+  color: var(--clr-bg);
 }
 
 h1 + p::after {
@@ -112,18 +127,18 @@ menu li {
 }
 
 nav a {
-  color: #e2dbec;
+  color: var(--clr-bg);
   margin: 0;
   padding: 0;
 }
 
 /*pseudoclass*/
 nav a:hover {
-  color: #ffffff;
+  color: var(--clr-white);
 }
 
 nav a:active {
-  color: #d8bdff;
+  color: var(--clr-light-pink);
 }
 /*:hover needs to be defined before :active, otherwise hover would override the active*/
 
@@ -133,11 +148,11 @@ aside p {
   top: 1.5rem;
   width: fit-content;
   height: fit-content;
-  background-color: #ffd22f;
+  background-color: var(--clr-yellow);
   border-radius: 0.125rem;
   margin: 0px;
   padding: 0.2rem 0.75rem 0.22rem 0.75rem;
-  color: #3a274a;
+  color: var(--clr-text-default);
   font-weight: 400;
 }
 
@@ -157,7 +172,7 @@ main {
 article + article {
   border-top-style: solid;
   border-width: 0.125rem;
-  border-top-color: #d1cae6;
+  border-top-color: var(--clr-light-purple);
   padding-top: 1.5rem;
 }
 
@@ -195,15 +210,15 @@ main > * {
 
 /*descendant selector*/
 main a {
-  color: #3a018a;
+  color: var(--clr-purple-darker);
 }
 
 main a:hover {
-  color: #5700d0;
+  color: var(--clr-purple);
 }
 
 main a:active {
-  color: #7c1fff;
+  color: var(--clr-vibrant-purple);
 }
 
 a {
@@ -231,7 +246,7 @@ a:hover {
 .experiences section p:nth-of-type(2) {
   font-size: 1rem;
   font-weight: 600;
-  color: #42354d;
+  color: var(--clr-text-alt);
 }
 
 .experiences section p:nth-of-type(1)::before {
@@ -246,7 +261,7 @@ a:hover {
 .experiences section:nth-of-type(2),
 .experiences section:nth-of-type(3) {
   border-left-style: solid;
-  border-color: #d1cae6;
+  border-color: var(--clr-light-purple);
   border-width: 0.5rem;
   padding-left: 1.5rem;
   padding-bottom: 0.063rem;
@@ -257,7 +272,7 @@ a:hover {
 
 .experiences section:nth-of-type(4) {
   border-left-style: solid;
-  border-color: #d1cae6;
+  border-color: var(--clr-light-purple);
   border-width: 0.5rem;
   padding-left: 1.5rem;
   padding-bottom: 0.063rem;
@@ -298,7 +313,7 @@ li + li {
 
 .skills li {
   list-style-type: none;
-  background-color: #c3b4ec49;
+  background-color: var(--clr-bg-accent);
   border-radius: 0.25rem;
   padding: 0.063rem 0.5rem 0.063rem 0.5rem;
 }
@@ -309,7 +324,7 @@ li + li {
   display: inline-block;
   margin-right: 0.5rem;
   margin-bottom: 0.625rem;
-  background-color: #c3b4ec49;
+  background-color: var(--clr-bg-accent);
   border-radius: 0.25rem;
   padding: 0.063rem 0.5rem 0.063rem 0.5rem;
 }
