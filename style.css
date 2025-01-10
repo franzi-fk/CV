@@ -51,6 +51,9 @@ h6 {
   font-weight: 600;
   color: var(--clr-text-headline);
   letter-spacing: normal;
+  padding: 0;
+  margin: 0;
+  line-height: 110%;
 }
 
 h1 {
@@ -58,7 +61,6 @@ h1 {
   letter-spacing: 0.062rem;
   font-weight: 400;
   font-size: 2.75rem;
-  margin-bottom: 2rem;
 }
 
 h2 {
@@ -93,9 +95,8 @@ h6 {
 /* ---------------------------------------------- */
 
 header {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 2.5rem;
+  padding-inline: 1rem;
+  padding-top: 5rem;
   padding-bottom: 2rem;
   text-align: center;
   background-color: var(--clr-accent);
@@ -159,11 +160,9 @@ aside p {
 /*----- || Main General || -----*/
 
 main {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-  max-width: 64ch;
+  padding-inline: 1rem;
+  padding-block: 1rem;
+  max-width: 80ch;
   margin: 0 auto;
 }
 
@@ -173,7 +172,7 @@ article + article {
   border-top-style: solid;
   border-width: 0.125rem;
   border-top-color: var(--clr-light-purple);
-  padding-top: 1.5rem;
+  padding-top: 3rem;
 }
 
 /*----- || Main Content Spacing || -----*/
@@ -184,17 +183,22 @@ h2 {
 }
 
 main > * {
-  padding: 0 1rem 2.825rem 1rem;
+  padding-inline: 1rem;
 }
 
-.profile p,
-.skills p {
-  margin: 0px;
-  padding: 0px;
+article {
+  padding-block: 3rem;
+}
+
+.profile p {
+  margin-top: 1.6rem;
+  margin-bottom: 0;
+  padding: 0;
 }
 
 .experiences p {
-  padding-block: 0.125rem;
+  /* creates tiny space bottom of p to achieve better alignment with the left border */
+  padding-bottom: 0.125rem;
   margin: 0px;
 }
 
@@ -203,7 +207,15 @@ main > * {
 }
 
 .skills section + section {
-  padding-top: 0.25rem;
+  padding-top: 2.5rem;
+}
+
+.skills section:nth-of-type(1) {
+  margin-top: 2rem;
+}
+
+.contact section:nth-of-type(1) {
+  margin-top: 2rem;
 }
 
 /*----- || Main Links || -----*/
@@ -339,7 +351,7 @@ ol li a {
 
 @media screen and (max-width: 767px) {
   header {
-    padding-top: 4rem;
+    padding-top: 6.8rem;
   }
 }
 
@@ -347,17 +359,35 @@ ol li a {
   body {
     font-size: 1.1rem;
   }
-  article + article {
-    padding-top: 2.5rem;
-  }
-  main > * {
-    padding-bottom: 3.5rem;
-  }
   menu {
     align-items: baseline;
     justify-content: center;
     gap: 1.7rem;
     flex-direction: row;
+  }
+  .main-article {
+    display: grid;
+    grid-template-columns: 12rem auto;
+    grid-column-gap: 2rem;
+  }
+  .main-article h2 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  .main-article section {
+    grid-column-start: 2;
+    grid-column-end: -1;
+  }
+
+  .experiences section:nth-of-type(1),
+  .experiences section:nth-of-type(2),
+  .experiences section:nth-of-type(3),
+  .experiences section:nth-of-type(4) {
+    padding-left: 1.5rem;
+    padding-bottom: 0.063rem;
+    padding-top: 0px;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
   }
 }
 
